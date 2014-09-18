@@ -29,6 +29,9 @@ class LoginViewController: UIViewController {
         
         delay(2, closure: { () -> () in
             self.loadingActivityView.stopAnimating()
+            self.loginButton.selected = false
+            self.performSegueWithIdentifier("loginSegue", sender: self)
+           
         })
         
     }

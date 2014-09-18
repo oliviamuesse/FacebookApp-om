@@ -444,6 +444,7 @@
                     <connections>
                         <outlet property="loadingActivityView" destination="LMM-VJ-ZLU" id="bt6-23-Ncp"/>
                         <outlet property="loginButton" destination="Ga9-vc-CBR" id="lRf-s1-qIB"/>
+                        <segue destination="181-2M-Tzl" kind="modal" identifier="loginSegue" modalTransitionStyle="flipHorizontal" id="9f7-HU-IlO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAi-Y7-svK" userLabel="First Responder" sceneMemberID="firstResponder"/>
