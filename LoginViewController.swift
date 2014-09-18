@@ -10,30 +10,42 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-@IBOutlet weak var loadingActivityView: UIActivityIndicatorView!
+    @IBOutlet weak var loadingActivityView: UIActivityIndicatorView!
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
+    
     @IBAction func onTap(sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
     @IBAction func onLoginButton(sender: UIButton) {
+        
         loadingActivityView.startAnimating()
         loginButton.selected = true
         
         delay(2, closure: { () -> () in
             self.loadingActivityView.stopAnimating()
             self.loginButton.selected = false
-            self.performSegueWithIdentifier("loginSegue", sender: self)
-           
+            
+            if (self.emailTextField.text == "") && (self.passwordTextField == "") {
+                UIAlertView(title: "Oh no!", message: "That's too bad", delegate: nil, cancelButtonTitle: "Try again...").show()
+            } else {
+                self.emailTextField.text = ""
+                self.passwordTextField.text = ""
+                self.performSegueWithIdentifier("loginSegue", sender: self)
+                
+            }
+            
         })
         
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
     
 

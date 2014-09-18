@@ -186,6 +186,13 @@
                                     <segue destination="V5j-hD-rFI" kind="modal" id="YK0-HS-cb8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B0B-pW-TXl">
+                                <rect key="frame" x="269" y="26" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82745116949081421" green="0.83921581506729126" blue="0.85882359743118286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -442,8 +449,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="PZe-NI-L9M" id="fdv-TF-sxV"/>
                         <outlet property="loadingActivityView" destination="LMM-VJ-ZLU" id="bt6-23-Ncp"/>
                         <outlet property="loginButton" destination="Ga9-vc-CBR" id="lRf-s1-qIB"/>
+                        <outlet property="passwordTextField" destination="ex4-gC-C5U" id="307-Fh-bxb"/>
                         <segue destination="181-2M-Tzl" kind="modal" identifier="loginSegue" modalTransitionStyle="flipHorizontal" id="9f7-HU-IlO"/>
                     </connections>
                 </viewController>
