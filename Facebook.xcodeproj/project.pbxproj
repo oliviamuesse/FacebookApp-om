@@ -21,6 +21,7 @@
 		429277A6198F392800E19641 /* CreatePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429277A5198F392800E19641 /* CreatePhotoViewController.swift */; };
 		429277A8198F393500E19641 /* CreateCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429277A7198F393500E19641 /* CreateCheckinViewController.swift */; };
 		45206E5A19CA7E2D00E238B4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45206E5919CA7E2D00E238B4 /* DetailViewController.swift */; };
+		45206E5E19CA874500E238B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45206E5D19CA874500E238B4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		429277A5198F392800E19641 /* CreatePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePhotoViewController.swift; sourceTree = "<group>"; };
 		429277A7198F393500E19641 /* CreateCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCheckinViewController.swift; sourceTree = "<group>"; };
 		45206E5919CA7E2D00E238B4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		45206E5D19CA874500E238B4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		42167647198E3220008CCBC3 = {
 			isa = PBXGroup;
 			children = (
+				45206E5D19CA874500E238B4 /* LoginViewController.swift */,
 				42167652198E3220008CCBC3 /* Facebook */,
 				42167665198E3220008CCBC3 /* FacebookTests */,
 				42167651198E3220008CCBC3 /* Products */,
@@ -253,6 +256,7 @@
 				429277A8198F393500E19641 /* CreateCheckinViewController.swift in Sources */,
 				42167678198ECE0E008CCBC3 /* RequestsViewController.swift in Sources */,
 				42167673198EAABC008CCBC3 /* SettingsViewController.swift in Sources */,
+				45206E5E19CA874500E238B4 /* LoginViewController.swift in Sources */,
 				4216767A198ECE88008CCBC3 /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
