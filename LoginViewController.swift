@@ -9,7 +9,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+@IBOutlet weak var loadingActivityView: UIActivityIndicatorView!
+    
+    @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,11 +23,31 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func onLoginButton(sender: UIButton) {
+        loadingActivityView.startAnimating()
+        loginButton.selected = true
+        
+        delay(2, closure: { () -> () in
+            self.loadingActivityView.stopAnimating()
+        })
+        
+    }
+    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+        dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(delay * Double(NSEC_PER_SEC))
+        ),
+        dispatch_get_main_queue(), closure)
+}
 
     /*
     // MARK: - Navigation

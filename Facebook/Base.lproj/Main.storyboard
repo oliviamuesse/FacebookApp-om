@@ -398,43 +398,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="TAq-B4-NsT">
-                                <rect key="frame" x="74" y="109" width="174" height="43"/>
+                                <rect key="frame" x="72" y="75" width="174" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form_bg" id="DkW-XL-mGs">
-                                <rect key="frame" x="45" y="189" width="240" height="128"/>
+                                <rect key="frame" x="16" y="189" width="288" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" id="PZe-NI-L9M">
-                                <rect key="frame" x="67" y="211" width="203" height="30"/>
+                                <rect key="frame" x="37" y="209" width="243" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" id="ex4-gC-C5U">
-                                <rect key="frame" x="67" y="269" width="203" height="30"/>
+                                <rect key="frame" x="37" y="267" width="243" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ga9-vc-CBR">
-                                <rect key="frame" x="59" y="366" width="212" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Ga9-vc-CBR">
+                                <rect key="frame" x="-8" y="502" width="338" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" image="login_button_enabled">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled" image="login_button_disabled"/>
+                                <state key="selected" image="logging_in_button"/>
                                 <connections>
-                                    <segue destination="181-2M-Tzl" kind="modal" id="61s-ZS-Tia"/>
+                                    <action selector="onLoginButton:" destination="VNV-8J-8WQ" eventType="touchUpInside" id="ciS-3G-h8i"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="LMM-VJ-ZLU">
+                                <rect key="frame" x="140" y="135" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.23495493500874107" green="0.33376284147557733" blue="0.60237962372448983" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.24078325577199691" green="0.34333310997687633" blue="0.63159677933673475" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="dpJ-Io-MqM" appends="YES" id="zEB-mZ-7AL"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="loadingActivityView" destination="LMM-VJ-ZLU" id="bt6-23-Ncp"/>
+                        <outlet property="loginButton" destination="Ga9-vc-CBR" id="lRf-s1-qIB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAi-Y7-svK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="dpJ-Io-MqM">
@@ -644,6 +654,9 @@
         <image name="home_feed" width="320" height="1025"/>
         <image name="like_btn" width="17" height="40"/>
         <image name="like_btn_selected" width="17" height="40"/>
+        <image name="logging_in_button" width="293" height="52"/>
+        <image name="login_button_disabled" width="293" height="52"/>
+        <image name="login_button_enabled" width="293" height="52"/>
         <image name="logo" width="174" height="43"/>
         <image name="messages" width="320" height="460"/>
         <image name="messages_tab" width="27" height="27"/>
