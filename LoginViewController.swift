@@ -12,9 +12,16 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loadingActivityView: UIActivityIndicatorView!
     
-    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.loginButton.enabled = false
+        
+        // Do any additional setup after loading the view.
+    }
     
     @IBAction func onTap(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -24,32 +31,43 @@ class LoginViewController: UIViewController {
         
         loadingActivityView.startAnimating()
         loginButton.selected = true
+        var defaults = NSUserDefaults.standardUserDefaults()
         
         delay(2, closure: { () -> () in
             self.loadingActivityView.stopAnimating()
             self.loginButton.selected = false
             
-            if (self.emailTextField.text == "") && (self.passwordTextField == "") {
-                UIAlertView(title: "Oh no!", message: "That's too bad", delegate: nil, cancelButtonTitle: "Try again...").show()
-            } else {
+            if (self.emailTextField.text == "olivia") && (self.passwordTextField.text == "password") {
+                defaults.setBool(false, forKey: "isNewUser")
                 self.emailTextField.text = ""
                 self.passwordTextField.text = ""
                 self.performSegueWithIdentifier("loginSegue", sender: self)
-                
+            } else if (self.emailTextField.text == "newuser") && (self.passwordTextField.text == "password") {
+                self.performSegueWithIdentifier("loginSegue", sender: self)
+                defaults.setBool(true, forKey: "isNewUser")
+                defaults.synchronize()
+            } else {
+                UIAlertView(title: "Oh no!", message: "User name and/or password is incorrect", delegate: nil, cancelButtonTitle: "Try again").show()
             }
-            
         })
-        
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-
+    func emailPasswordCheck() {
+        if (self.emailTextField.text == "") || (self.passwordTextField.text == "") {
+            self.loginButton.enabled = false
+        } else {
+            self.loginButton.enabled = true
+        }
+    }
+    
+    @IBAction func onEmailText(sender: AnyObject) {
+        emailPasswordCheck()
+    }
+    
+    @IBAction func onPasswordText(sender: AnyObject) {
+        emailPasswordCheck()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

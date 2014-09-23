@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController, UIActionSheetDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var settingsImageView: UIImageView!
+    @IBOutlet weak var logoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,22 @@ class SettingsViewController: UIViewController, UIActionSheetDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onLogoutButton(sender: AnyObject) {
+        var actionSheet = UIActionSheet()
+        actionSheet.title = "Are you sure you want to log out?"
+        actionSheet.delegate = self
+        actionSheet.addButtonWithTitle("Logout")
+        actionSheet.addButtonWithTitle("Cancel")
+        actionSheet.cancelButtonIndex = 1
+        actionSheet.destructiveButtonIndex = 0
+        actionSheet.showInView(self.view)
+    }
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        if buttonIndex == 0 {
+            performSegueWithIdentifier("logoutSegue", sender: self)
+        }
+    }
     /*
     // MARK: - Navigation
 

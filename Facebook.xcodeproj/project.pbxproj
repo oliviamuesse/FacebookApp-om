@@ -22,6 +22,7 @@
 		429277A8198F393500E19641 /* CreateCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429277A7198F393500E19641 /* CreateCheckinViewController.swift */; };
 		45206E5A19CA7E2D00E238B4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45206E5919CA7E2D00E238B4 /* DetailViewController.swift */; };
 		45206E5E19CA874500E238B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45206E5D19CA874500E238B4 /* LoginViewController.swift */; };
+		45B806BD19D10E5900F7D6EB /* ScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B806BC19D10E5900F7D6EB /* ScratchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		429277A7198F393500E19641 /* CreateCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCheckinViewController.swift; sourceTree = "<group>"; };
 		45206E5919CA7E2D00E238B4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		45206E5D19CA874500E238B4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		45B806BC19D10E5900F7D6EB /* ScratchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				42167674198EAAC6008CCBC3 /* View Controllers */,
-				42167655198E3220008CCBC3 /* AppDelegate.swift */,
 				42167659198E3220008CCBC3 /* Main.storyboard */,
+				45B806BC19D10E5900F7D6EB /* ScratchViewController.swift */,
 				4216765C198E3220008CCBC3 /* Images.xcassets */,
 				42167653198E3220008CCBC3 /* Supporting Files */,
 			);
@@ -143,6 +145,7 @@
 				429277A5198F392800E19641 /* CreatePhotoViewController.swift */,
 				429277A7198F393500E19641 /* CreateCheckinViewController.swift */,
 				45206E5919CA7E2D00E238B4 /* DetailViewController.swift */,
+				42167655198E3220008CCBC3 /* AppDelegate.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B806BD19D10E5900F7D6EB /* ScratchViewController.swift in Sources */,
 				45206E5A19CA7E2D00E238B4 /* DetailViewController.swift in Sources */,
 				429277A0198F068E00E19641 /* StoryViewController.swift in Sources */,
 				429277A2198F35B600E19641 /* MessagesViewController.swift in Sources */,
